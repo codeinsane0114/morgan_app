@@ -34,6 +34,10 @@ a:hover::after {
 .link {
   cursor: pointer;
 }
+/* .no-bg-link::after{
+  background: none;
+} */
+
 .link::after {
   content: '';
   position: absolute;
