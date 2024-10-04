@@ -50,18 +50,18 @@ export default function Header() {
 			<div className={`w-full h-[130px] flex relative bg-background justify-center transition-opacity duration-300 ${
 				isScrolled ? "bg-opacity-100" : "bg-opacity-0"
 			}}`}>
-				<div className={`max-w-[1290px] flex  flex-row h-[50px] w-full justify-between mx-auto bg-slate-600 sm:bg-gray-300 lg:bg-slate-950 duration-300 lg:flex-row ml-auto mt-9 px-[40px] relative ${bar  ? 'z-[12]':''}`}>
+				<div className={`max-w-[1290px] flex  flex-row h-[50px] w-full justify-between mx-auto bg-slate-600 tracking-normal sm:bg-gray-300 lg:bg-slate-950 duration-300 lg:flex-row ml-auto mt-9 px-[40px] relative ${bar  ? 'z-[12]':''}`}>
 				
 					<div className='max-w-[403.33px] w-full h-[44px] flex flex-row justify-center'>
-						<Link to={'/building'}className={`max-w-[128.42px] w-full h-[44px] py-2 ${bar ? 'opacity-0' : ''}`} ><p style={{color:  '#f0ede8',font:'16px'}}>The Building</p></Link>
-						<Link to={'/building'}className={`max-w-[128.42px] w-full h-[44px] py-2 ${bar ? 'opacity-0' : ''}`} style={{cursor:'pointer',color:  '#f0ede8',font:'16px'}}>The Roof</Link>
+						<Link to={'/building'}className={`max-w-[128.42px] w-full h-[44px] py-2 ${bar ? 'opacity-0' : ''}`} ><p style={{color:  '#f0ede8',font:'16px'}}>THE BUILDING</p></Link>
+						<Link to={'/building'}className={`max-w-[128.42px] w-full h-[44px] py-2 ${bar ? 'opacity-0' : ''}`} style={{cursor:'pointer',color:  '#f0ede8',font:'16px'}}>THE ROOF</Link>
 					</div>
 					<Link to={'/'} className='max-w-[150px] w-full h-[59px]'>
 						<img src={Logo}></img>
 					</Link>
 					<div className='max-w-[403.33px] w-full flex flex-row justify-center h-[44px] relative'>
-					<Link to={'/building'}className={`max-w-[159.29px] w-full h-[44px] py-2 ${bar ? 'opacity-0' : ''}`}><p style={{color:  '#f0ede8',font:'16px'}}>NEIGHBORHOOD</p></Link>
-					<Link to={'/building'}className={`max-w-[84.9px] w-full h-[44px] py-2 ${bar ? 'opacity-0' : ''}`}><p style={{color:  '#f0ede8',font:'16px'}}>contact</p></Link>
+					<Link to={'/building'}className={`max-w-[159.29px] w-full h-[44px]  py-2 ${bar ? 'opacity-0' : ''}`}><p style={{color:  '#f0ede8',font:'16px'}}>NEIGHBORHOOD</p></Link>
+					<Link to={'/building'}className={`max-w-[84.9px] w-full h-[44px] py-2 ${bar ? 'opacity-0' : ''}`}><p style={{color:  '#f0ede8',font:'16px'}}>CONTACT</p></Link>
 					<div className={`max-w-[50px] w-full h-[50px] `} >
 					<button
 						onClick={openDrawer}
