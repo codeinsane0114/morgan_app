@@ -21,31 +21,31 @@ export default function Home() {
                 </div>
             </section>
             <div className='w-full pt-24 text-black'>
-                <section className='max-w-[1290px] h-[332.38px] px-10 border-0 border-solid border-gray-300' style={{textAlign:'center',marginLeft:'auto',marginRight:'auto',fontSize:'1.125rem',lineHeight:'1.75rem',fontWeight:'400',color:'black'}}>
-                    <div className='max-w-[980px] h-[332.38px] mx-[115px]'>
-                        <p className=' max-w-[980px] h-[24px] contrast-[3.48] text-lg text-[#B37E5]'>WELCOME TO MORGAN NORTH</p>
-                        <h2 className=' max-w-[980px] h-[72px] text-[#004F48] mt-3 pb-[12px] contrast-[9.49] text-5xl'>Office space that’s a breath of fresh air.</h2>
-                        <p className=' max-w-[980px] h-[112px] contrast-[21] mt-[40px] text-lg text-[#00000]'>Unmatched in extraordinary access to outdoor space and approach to employee well-being, Morgan North is creating a new nature of work. It's where the city’s largest greenspace elevates your daily experience. Where work and life don’t just balance, but harmonize – an environment where collaboration drives the energy and “good enough” is never the answer. Here, at Morgan North, you’re able to pause–to make space for yourself, for each other, and for ideas.</p>
+                <section className='max-w-[1290px] px-10 border-0 border-solid border-gray-300' style={{textAlign:'center',marginLeft:'auto',marginRight:'auto',fontSize:'1.125rem',lineHeight:'1.75rem',fontWeight:'400',color:'black'}}>
+                    <div className='max-w-[980px] md:mx-[115px]'>
+                        <p className=' max-w-[980px] contrast-[3.48] text-lg text-[#B37E5]'>WELCOME TO MORGAN NORTH</p>
+                        <h2 className=' max-w-[980px] text-[#004F48] mt-3 pb-[12px] contrast-[9.49] text-5xl'>Office space that’s a breath of fresh air.</h2>
+                        <p className=' max-w-[980px] contrast-[21] mt-[40px] text-lg text-[#00000]'>Unmatched in extraordinary access to outdoor space and approach to employee well-being, Morgan North is creating a new nature of work. It's where the city’s largest greenspace elevates your daily experience. Where work and life don’t just balance, but harmonize – an environment where collaboration drives the energy and “good enough” is never the answer. Here, at Morgan North, you’re able to pause–to make space for yourself, for each other, and for ideas.</p>
                         <Link to={'/roof'} className='max-w-[276.89] h-[32.38] text-[#004548] text-lg mt-[40px] pr-[35px] pb-[8px] flex flex-row justify-center items-baseline'><text className='max-w-[200px] h-[19px]'>A VIEW FROM THE TOP</text><svg className=" max-w-[22px] h-[11px]" xmlns="http://www.w3.org/2000/svg" width="22" height="11" viewBox="0 0 22 11" fill="none"><path d="M16.0425 6.41748H0V4.58496H16.0425V0H16.5L22 5.34668V5.65332L16.5 11H16.0425V6.41748Z" fill="currentColor"></path></svg></Link>
                     </div>
                 </section>
                 <div className='w-full'>
-                    <img src="img/resources/Homeimage.jpg" alt="Morgan North" className=" w-full mt-[96px] h-[1062.04px] object-cover"/>
+                    <img src="img/resources/Homeimage.jpg" alt="Morgan North" className=" w-full mt-[96px]  object-cover"/>
                 </div>
             </div>
-            <div className='w-full py-24 h-[1054.79px] text-[#00000] bg-[#F0EDE8]'>
-                <section className='max-w-[1290px] h-[168px] text-base ml-auto mr-auto px-10 '>
-                    <div className='max-w-[980px] h-[168px] text-lg ml-auto text-right'>
-                        <p className='max-w-[980px] h-[24px] text-[#B37E55] text-base contrast-[2.98]'>EXPLORE</p>
-                        <h2 className='max-w-[980px] h-[132px] text-[#004f48] text-6xl mt-3 pb-3'>Discover the natural<br/>evolution of office space.</h2>
+            <div className='w-full py-24 text-[#00000] bg-[#F0EDE8]'>
+                <section className='max-w-[1290px] text-base ml-auto mr-auto px-10 '>
+                    <div className='max-w-[980px] text-lg ml-auto text-right'>
+                        <p className='max-w-[980px] text-[#B37E55] text-base contrast-[2.98]'>EXPLORE</p>
+                        <h2 className='max-w-[980pxtext-[#004f48] text-6xl mt-3 pb-3'>Discover the natural<br/>evolution of office space.</h2>
                     </div>
                 </section>
-                <section className='w-full h-[594px] block mt-[96px]'>
-                   <div className='w-full h-[594px] flex items-start justify-between gap-10'>
-                     <div className='max-w-[455px] h-[594px] opacity-100 transform-none delay-15 ease-linear duration-40 pointer-events-auto'>
-                        <div className='max-w-[455px] h-[546px] block'>
-                        <Link className="max-w-[455px] h-[546px] relative overflow-hidden" to={'/building'} target="">
-                            <div className="max-w-[255px] h-[546px] text-[#fffff] bg-background absolute flex items-center bg-opacity-100 text-opacity-100 opacity-0 ease-in-out duration-35">The Building</div>
+                <section className='w-full block mt-[96px]'>
+                   <div className='w-full flex items-start justify-between gap-10'>
+                     <div className='max-w-[455px] opacity-100 transform-none delay-15 ease-linear duration-40 pointer-events-auto'>
+                        <div className='max-w-[455px] block'>
+                        <Link className="max-w-[455px] relative overflow-hidden" to={'/building'} target="">
+                            <div className="max-w-[255px] text-[#fffff] bg-background absolute flex items-center bg-opacity-100 text-opacity-100 opacity-0 ease-in-out duration-35">The Building</div>
                             <img src="img/resources/homebuild.webp" alt="A large, multi-story brick building with tall windows and ornate detailing under a clear blue sky."/>
                         </Link>
                         </div>
@@ -56,10 +56,10 @@ export default function Home() {
                                 </path></svg>
                         </Link>
                      </div>
-                     <div className='max-w-[455px] h-[594px] opacity-100 transform-none delay-15 ease-linear duration-40 pointer-events-auto'>
-                        <div className='max-w-[455px] h-[546px] block'>
-                        <Link className="max-w-[455px] h-[546px] relative overflow-hidden" to={'/building'} target="">
-                            <div className="max-w-[255px] h-[546px] text-[#fffff] bg-background absolute flex items-center bg-opacity-100 text-opacity-100 opacity-0 ease-in-out duration-35">The Building</div>
+                     <div className='max-w-[455px] opacity-100 transform-none delay-15 ease-linear duration-40 pointer-events-auto hidden md:block'>
+                        <div className='max-w-[455px] block'>
+                        <Link className="max-w-[455px] relative overflow-hidden" to={'/building'} target="">
+                            <div className="max-w-[255px] text-[#fffff] bg-background absolute flex items-center bg-opacity-100 text-opacity-100 opacity-0 ease-in-out duration-35">The Building</div>
                             <img src="img/resources/homeroof.webp" alt="A large, multi-story brick building with tall windows and ornate detailing under a clear blue sky."/>
                         </Link>
                         </div>
@@ -70,10 +70,10 @@ export default function Home() {
                                 </path></svg>
                         </Link>
                      </div>
-                     <div className='max-w-[455px] h-[594px] opacity-100 transform-none delay-15 ease-linear duration-40 pointer-events-auto'>
-                        <div className='max-w-[455px] h-[546px] block'>
-                        <Link className="max-w-[455px] h-[546px] relative overflow-hidden" to={'/building'} target="">
-                            <div className="max-w-[255px] h-[546px] text-[#fffff] bg-background absolute flex items-center bg-opacity-100 text-opacity-100 opacity-0 ease-in-out duration-35">The Building</div>
+                     <div className='max-w-[455px] opacity-100 transform-none delay-15 ease-linear duration-40 pointer-events-auto'>
+                        <div className='max-w-[455px] block'>
+                        <Link className="max-w-[455px] relative overflow-hidden" to={'/building'} target="">
+                            <div className="max-w-[255px] text-[#fffff] bg-background absolute flex items-center bg-opacity-100 text-opacity-100 opacity-0 ease-in-out duration-35">The Building</div>
                             <img src="img/resources/homeneibourhood.webp" alt="A large, multi-story brick building with tall windows and ornate detailing under a clear blue sky."/>
                         </Link>
                         </div>
@@ -84,10 +84,10 @@ export default function Home() {
                                 </path></svg>
                         </Link>
                      </div>
-                     <div className='max-w-[455px] h-[594px] opacity-100 transform-none delay-15 ease-linear duration-40 pointer-events-auto'>
-                        <div className='max-w-[455px] h-[546px] block'>
-                        <Link className="max-w-[455px] h-[546px] relative overflow-hidden" to={'/building'} target="">
-                            <div className="max-w-[255px] h-[546px] text-[#fffff] bg-background absolute flex items-center bg-opacity-100 text-opacity-100 opacity-0 ease-in-out duration-35">The Building</div>
+                     <div className='max-w-[455px] opacity-100 transform-none delay-15 ease-linear duration-40 pointer-events-auto  hidden md:block'>
+                        <div className='max-w-[455px] block'>
+                        <Link className="max-w-[455px] relative overflow-hidden" to={'/building'} target="">
+                            <div className="max-w-[255px] text-[#fffff] bg-background absolute flex items-center bg-opacity-100 text-opacity-100 opacity-0 ease-in-out duration-35">The Building</div>
                             <img src="img/resources/homegallery.webp" alt="A large, multi-story brick building with tall windows and ornate detailing under a clear blue sky."/>
                         </Link>
                         </div>
@@ -101,14 +101,14 @@ export default function Home() {
                    </div>
                 </section>
             </div>
-            <div className="w-full h-[1123.56px] text-[#00000] text-base py-24 ">
-                <section className=" flex w-full h-[931.56px]">
-                    <div className="w-full h-[931.56px] justify-center opacity-100 transform-none ease-linear duration-40 pointer-events-auto">
+            <div className="w-full text-[#00000] text-base py-24 ">
+                <section className="md:flex w-full">
+                    <div className="w-full justify-center opacity-100 transform-none ease-linear duration-40 pointer-events-auto">
                                 <img src="img/resources/homewelcome.jpg" title="The Building" className="w-full object-cover"/>
                             </div>
-                    <div className="w-full h-[931.56px] px-10 flex">
-                            <div className=" max-w-[557px] h-[248.38px] opacity-100 transform-none transition-opacity ease-linear duration-40 pointer-events-auto text-lg font-normal block my-auto">
-                                <h2 className='max-w=[557px] h-[192px] text-background text-6xl pb-3'>Welcome to<br/>a new nature<br/>of work.</h2>
+                    <div className="w-full px-10 flex">
+                            <div className=" max-w-[557px]  opacity-100 transform-none transition-opacity ease-linear duration-40 pointer-events-auto text-lg font-normal block my-auto">
+                                <h2 className='max-w-[557px]  text-background text-6xl pb-3'>Welcome to<br/>a new nature<br/>of work.</h2>
                                 <Link to={"/building"} target="" className=" max-w-[220px] items-center h-[32.38] text-background text-lg mt-6 pb-2 pr-[35px] flex flex-row relative w-fit arrow-btn font-bold uppercase border-b-2 text-[var(--arrow-btn-color)] border-[var(--arrow-btn-color)] leading-[128%] tracking-[2.16px] hover:text-[var(--arrow-btn-color-hover)] hover:scale-105 transition duration-300 ease-in-out hover:border-[var(--arrow-btn-color-hover)] max-sm:text-base pe-[35px]" isinline="false" index="1">
                                      The Building 
                                     <svg className="block align-middle fill-none max-w-[22px] h-[11px] overflow-hidden tracking-[2.16px] uppercase font-bold text-ellipsis text-lg pointer-events-auto" xmlns="http://www.w3.org/2000/svg" width="22" height="11" viewBox="0 0 22 11" fill="none"><path d="M16.0425 6.41748H0V4.58496H16.0425V0H16.5L22 5.34668V5.65332L16.5 11H16.0425V6.41748Z" fill="currentColor">
