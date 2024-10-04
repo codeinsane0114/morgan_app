@@ -50,7 +50,7 @@ export default function Header() {
 			<div className={`w-full h-[130px] flex relative bg-background justify-center transition-opacity duration-300 ${
 				isScrolled ? "bg-opacity-100" : "bg-opacity-0"
 			}}`}>
-				<div className={`max-w-[1290px] flex  flex-row h-[50px] w-full justify-between mx-auto bg-slate-600 sm:bg-gray-300 lg:bg-slate-950  duration-300 lg:flex-row ml-auto mt-9 px-[40px] relative ${bar  ? 'z-[12]':''}`}>
+				<div className={`max-w-[1290px] flex  flex-row h-[50px] w-full justify-between mx-auto bg-slate-600 sm:bg-gray-300 lg:bg-slate-950 duration-300 lg:flex-row ml-auto mt-9 px-[40px] relative ${bar  ? 'z-[12]':''}`}>
 				
 					<div className='max-w-[403.33px] w-full h-[44px] flex flex-row justify-center'>
 						<Link to={'/building'}className={`max-w-[128.42px] w-full h-[44px] py-2 ${bar ? 'opacity-0' : ''}`} ><p style={{color:  '#f0ede8',font:'16px'}}>The Building</p></Link>
@@ -72,7 +72,7 @@ export default function Header() {
 					</div>
 					</div>
 				</div>
-				<div className={`flex w-full min-h-screen h-full menu-bg transition-all duration-300 ease-in-out  justify-center items-safe-center fixed  opacity-1 bg-background ${!bar ? ' -top-full': 'z-[11]'}`}>
+				<div className={`flex w-full min-h-screen h-full menu-bg transition-all duration-500 ease-in-out  justify-center items-safe-center fixed  opacity-1 bg-background ${!bar ? ' -top-full': 'z-[11] top-0'}`}>
 					<nav class="flex max-lg:h-full max-lg:flex-col max-w-[1272px] mx-auto w-full justify-between px-4 pt-[120px] pb-[70px] gap-2 max-md:pt-[85px] max-sm:pb-[47px]">
 						<div class="lg:hidden"></div>
 						<ul class="gap-8 font-bold text-xl sm:text-4xl lg:text-[32px] lg:leading-normal flex flex-col items-center lg:items-start justify-center text-white">
