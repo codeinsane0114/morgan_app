@@ -47,7 +47,7 @@ export default function Header() {
   }, [location]);
 	return(
 		<>
-			<div className={`w-full h-[130px] flex relative bg-background justify-center transition-opacity duration-300 ${
+			<div className={`w-full h-[130px] flex relative bg-background justify-center transition-opacity duration-300  border-gray-300 border-solid border-0 ${
 				isScrolled ? "bg-opacity-100" : "bg-opacity-0"
 			}}`}>
 				<div className={`max-w-[1290px] flex  flex-row h-[50px] w-full justify-between mx-auto bg-slate-600 tracking-normal sm:bg-gray-300 lg:bg-slate-950 duration-300 lg:flex-row ml-auto mt-9 px-[40px] relative ${bar  ? 'z-[12]':''}`}>
@@ -66,7 +66,8 @@ export default function Header() {
 					<button
 						onClick={openDrawer}
 						>
-						<svg class="burger" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><path class="" d="M28.1719 16.4761H49.5546M34.0771 24.9999H41.9812H49.8852M34.1959 33.5237H50.0004" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"></path></svg>
+						{!bar ? <svg class="burger" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><path class="" d="M28.1719 16.4761H49.5546M34.0771 24.9999H41.9812H49.8852M34.1959 33.5237H50.0004" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"></path></svg>
+						: <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="Vector" d="M20 1.32074L18.6792 0L10 8.6792L1.32085 0L0 1.32074L8.67921 10L0 18.6793L1.32085 20L10 11.3208L18.6792 20L20 18.6793L11.3208 10L20 1.32074Z" fill="currentColor"></path></svg> }
 					</button>
 					</div>
 					</div>
@@ -75,7 +76,7 @@ export default function Header() {
 				<div className={`flex w-full min-h-screen h-full menu-bg transition-all duration-500 ease-in-out  justify-center items-safe-center fixed  opacity-1 bg-background ${!bar ? ' -top-full': 'z-[11] top-0'}`}>
 					<nav class="flex max-lg:h-full max-lg:flex-col max-w-[1272px] mx-auto w-full justify-between px-4 pt-[120px] pb-[70px] gap-2 max-md:pt-[85px] max-sm:pb-[47px]">
 						<div class="lg:hidden"></div>
-						<ul class="gap-8 font-bold text-xl sm:text-4xl lg:text-[32px] lg:leading-normal flex flex-col items-center lg:items-start justify-center text-white">
+						<ul class="gap-8 font-bold text-xl sm:text-4xl lg:text-[32px] lg:leading-normal flex flex-col items-center lg:items-start justify-center text-[#fffff]">
 							<li class="link"><a href="/building" target="">THE BUILDING</a></li>
 							<li class="link"><a href="/roof" target="">THE ROOF</a></li>
 							<li class="link"><a href="/neighborhood" target="">NEIGHBORHOOD</a></li>
