@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link,useNavigate,useLocation } from 'react-router-dom';
 import './menu.css';
-import Logo from "./../assets/img/logo.svg";
+import Logo from "./../assets/img/logo.png";
 export default function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [bar, setBar] = React.useState(false);
@@ -33,7 +33,7 @@ export default function Header() {
     { name: "CONTACT", link: "./contact" },
   ];
   const location = useLocation();
-
+	console.log(isScrolled)
   React.useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 50;
@@ -47,46 +47,45 @@ export default function Header() {
   }, [location]);
 	return(
 		<>
-			<div className={`w-full h-[130px] flex relative bg-background justify-center transition-opacity duration-300  border-gray-300 border-solid border-0 ${
-				isScrolled ? "bg-opacity-100" : "bg-opacity-0"
-			}}`}>
-				<div className={`max-w-[1290px] flex  flex-row h-[50px] w-full justify-between mx-auto bg-slate-600 tracking-normal sm:bg-gray-300 lg:bg-slate-950 duration-300 lg:flex-row ml-auto mt-9 px-[40px] relative ${bar  ? 'z-[12]':''}`}>
-				
-					<div className='max-w-[403.33px] w-full h-[44px] flex flex-row justify-center'>
-						<Link to={'/building'}className={`max-w-[128.42px] w-full h-[44px] hidden md:block py-2 ${bar ? 'opacity-0' : ''}`} ><p style={{color:  '#f0ede8',font:'16px'}}>THE BUILDING</p></Link>
-						<Link to={'/building'}className={`max-w-[128.42px] w-full h-[44px] hidden md:blcok py-2 ${bar ? 'opacity-0' : ''}`} style={{cursor:'pointer',color:  '#f0ede8',font:'16px'}}>THE ROOF</Link>
+			<div className={`w-full h-[130px] flex fixed justify-center ${!isScrolled && !bar ? 'header-bg': 'bg-background'} z-[12]`}>
+				<div className={`max-w-[1290px] flex flex-row h-[50px] w-full justify-between duration-300 lg:flex-row mx-auto pt-9 px-[40px]`}>
+					<div className='max-w-[403.33px] w-full h-[44px] flex flex-row justify-center gap-6'>
+						<Link to={'/building'}className={`h-[44px] hidden md:block py-2 text-white ${bar ? 'opacity-0' : ''} link`} >THE BUILDING</Link>
+						<Link to={'/building'}className={`h-[44px] hidden md:block py-2 text-white ${bar ? 'opacity-0' : ''} link`} >THE ROOF</Link>
 					</div>
 					<Link to={'/'} className='max-w-[150px] w-full h-[59px]'>
 						<img src={Logo}></img>
 					</Link>
-					<div className='max-w-[403.33px] w-full flex flex-row justify-center h-[44px] relative'>
-					<Link to={'/building'}className={`max-w-[159.29px] w-full h-[44px] hidden md:block py-2 ${bar ? 'opacity-0' : ''}`}><p style={{color:  '#f0ede8',font:'16px'}}>NEIGHBORHOOD</p></Link>
-					<Link to={'/building'}className={`max-w-[84.9px] w-full h-[44px] hidden md:block py-2 ${bar ? 'opacity-0' : ''}`}><p style={{color:  '#f0ede8',font:'16px'}}>CONTACT</p></Link>
-					<div className={`max-w-[50px] w-full h-[50px] `} >
-					<button
-						onClick={openDrawer}
-						>
-						{!bar ? <svg class="burger" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><path class="" d="M28.1719 16.4761H49.5546M34.0771 24.9999H41.9812H49.8852M34.1959 33.5237H50.0004" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"></path></svg>
-						: <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="Vector" d="M20 1.32074L18.6792 0L10 8.6792L1.32085 0L0 1.32074L8.67921 10L0 18.6793L1.32085 20L10 11.3208L18.6792 20L20 18.6793L11.3208 10L20 1.32074Z" fill="currentColor"></path></svg> }
-					</button>
-					</div>
-					</div>
+					<div className='max-w-[403.33px] w-full flex flex-row justify-center h-[44px]  gap-6'>
+						<Link to={'/building'}className={`h-[44px] hidden md:block py-2 text-white ${bar ? 'opacity-0' : ''} link`}>NEIGHBORHOOD</Link>
+						<Link to={'/building'}className={`h-[44px] hidden md:block py-2 text-white ${bar ? 'opacity-0' : ''} link`}>CONTACT</Link>
+						<div className={`max-w-[50px] w-full h-[50px] `} >
+							<button
+								onClick={openDrawer}
+							>
+								<div className={`${!bar? 'flex flex-col gap-1 self-end':'relative'}`}>
+									<div className={`w-[24px] h-[2px] bg-white transition-all duration-300 ${bar? 'hidden': ''}`}></div>
+									<div className={`${!bar? 'w-[20px]': 'w-[26px] rotate-45 top-[1px] relative'} h-[2px] bg-white transition-all duration-300`}></div>
+									<div className={`${!bar? 'w-[20px]': 'w-[26x] -rotate-45 -top-[1px] relative'} h-[2px] bg-white transition-all duration-300`}></div>
+								</div>
+							</button>
+						</div>
 					</div>
 				</div>
-				<div className={`flex w-full min-h-screen h-full menu-bg transition-all duration-500 ease-in-out  justify-center items-safe-center fixed  opacity-1 bg-background ${!bar ? ' -top-full': 'z-[11] top-0'}`}>
-					<nav class="flex max-lg:h-full max-lg:flex-col max-w-[1272px] mx-auto w-full justify-between px-4 pt-[120px] pb-[70px] gap-2 max-md:pt-[85px] max-sm:pb-[47px]">
-						<div class="lg:hidden"></div>
-						<ul class="gap-8 font-bold text-xl sm:text-4xl lg:text-[32px] lg:leading-normal flex flex-col items-center lg:items-start justify-center text-[#fffff]">
-							<li class="link"><a href="/building" target="">THE BUILDING</a></li>
-							<li class="link"><a href="/roof" target="">THE ROOF</a></li>
-							<li class="link"><a href="/neighborhood" target="">NEIGHBORHOOD</a></li>
-							<li class="link"><a href="/gallery" target="">GALLERY</a></li>
-							<li class="link"><a href="/team" target="">TEAM</a></li>
-							<li class="link"><a href="/contact" target="">CONTACT</a></li>
-						</ul>
-					</nav>
-				</div>
-				
+			</div>
+			<div className={`flex w-full h-screen menu-bg transition-all duration-0 ease-in-out  justify-center items-safe-center fixed  opacity-1 bg-background ${!bar ? ' -top-full': 'z-[11] top-0'}`}>
+				<nav class="flex max-lg:h-full max-lg:flex-col max-w-[1272px] mx-auto w-full justify-between px-4 pt-[120px] pb-[70px] gap-2 max-md:pt-[85px] max-sm:pb-[47px]">
+					<div class="lg:hidden"></div>
+					<ul class="gap-8 font-bold text-xl sm:text-4xl lg:text-[32px] lg:leading-normal flex flex-col items-center lg:items-start justify-center text-[#fffff]">
+						<li class="link"><a href="/building" target="" className='text-white'>THE BUILDING</a></li>
+						<li class="link"><a href="/roof" target="" className='text-white'>THE ROOF</a></li>
+						<li class="link"><a href="/neighborhood" className='text-white' target="">NEIGHBORHOOD</a></li>
+						<li class="link"><a href="/gallery" target="" className='text-white'>GALLERY</a></li>
+						<li class="link"><a href="/team" target="" className='text-white'>TEAM</a></li>
+						<li class="link"><a href="/contact" target="" className='text-white'>CONTACT</a></li>
+					</ul>
+				</nav>
+			</div>
 		</>
 	)
 }

@@ -15,11 +15,11 @@ function App() {
         <Header />
         <Home />
         <Footer />
-        <ReactScrollToTop
-              smooth
-              className="scroll-to-top-button border-brown-bg bg-main-bg animate-duration hover:bg-brown-bg rounded-full border-[2px]"
-              height="22"
-            />
+        {/* <ReactScrollToTop
+          smooth
+          className="scroll-to-top-button border-brown-bg bg-main-bg animate-duration hover:bg-brown-bg rounded-full border-[2px]"
+          height="22"
+        /> */}
       </div>
       </Wrapper>
     </BrowserRouter>

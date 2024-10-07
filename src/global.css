@@ -17,7 +17,10 @@
   font-family: 'spartan-mb-5';
   src: url('./assets/fonts/spartan-mb-5.ttf');
 }
-/* a::after {
+.link {
+  position: relative;
+}
+.link::after {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -28,9 +31,12 @@
   transition: width 0.3s ease-in-out;
 }
 
-a:hover::after {
+.link:hover::after {
   width: 100%;
-} */
+}
+.header-bg {
+  background: linear-gradient(180deg, rgba(85,85,85,1) 0%, rgba(255,255,255,0) 100%);
+}
 /*.link {
   cursor: pointer;
 }
