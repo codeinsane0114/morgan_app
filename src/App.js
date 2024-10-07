@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Wrapper } from './Components/Wrapper'
 import Header from "./Layouts/Header";
 import Home from "./pages/Home";
+import Building from "./pages/Buliding";
 import Footer  from "./Layouts/Footer";
 import ReactScrollToTop from "react-scroll-to-top";
 import './index.css';
@@ -13,7 +14,10 @@ function App() {
     <Wrapper>
       <div className="App bg-custom-color flex flex-col">
         <Header />
-        <Home />
+        <Routes>
+          <Route path="/" exact element={<Home />}></Route>
+          <Route path="/building" exact element={<Building />}></Route>
+        </Routes>
         <Footer />
         {/* <ReactScrollToTop
           smooth
