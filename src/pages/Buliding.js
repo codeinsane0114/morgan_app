@@ -1,13 +1,9 @@
-import React from "react";
-
-
-
-
+import React, { useState, useRef, useEffect } from "react";
 
 export default function Building(){
-    return(
-        <div className="flex w-full h-screen ">
-
-        </div>
-    )
+  return(
+    <div className="flex w-full">
+      
+    </div>
+  )
 }
