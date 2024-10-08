@@ -24,15 +24,15 @@ export default function LinkCart({name, link, img, className}) {
             </div>
           </div>
           <p 
-            className='text-center flex self-center cursor-pointer gap-4'
+            className='text-center flex self-center cursor-pointer gap-4 text-gray-dark'
             onMouseOver={() => {setOnLinkHover(true)}}
             onMouseOut={() => {setOnLinkHover(false)}}
           >
             {name}
             <span className={`content-center relative duration-300 transition-all ${onLinkHover ? ' pl-4' : ''}`}>
-              <div className={`w-[28px] h-[1px] ${onLinkHover ? 'bg-background' : 'bg-gray-dark'}  hover:`}></div>
-              <div className={`w-[8px] rotate-45 h-[1px] ${onLinkHover ? 'bg-background' : 'bg-gray-dark'} absolute right-0 top-[9px]`}></div>
-              <div className={`w-[8px] -rotate-45 h-[1px]  ${onLinkHover ? 'bg-background' : 'bg-gray-dark'} absolute right-0 top-[15px]`}></div>
+              <div className={`w-[28px] h-[2px] ${onLinkHover ? 'bg-background' : 'bg-gray-dark'}  hover:`}></div>
+              <div className={`w-[8px] rotate-45 h-[2px] ${onLinkHover ? 'bg-background' : 'bg-gray-dark'} absolute right-0 top-[8px]`}></div>
+              <div className={`w-[8px] -rotate-45 h-[2px]  ${onLinkHover ? 'bg-background' : 'bg-gray-dark'} absolute right-0 top-[14px]`}></div>
             </span>
           </p>
         </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link,useNavigate,useLocation } from 'react-router-dom';
 import './menu.css';
 import Logo from "./../assets/img/logo.png";
@@ -10,8 +10,9 @@ export default function Header() {
   const openDrawer = () => {
       setBar(!bar);
   };
-  
+  const [currentPosition, setCurrentPosition] = useState(0);
   const closeDrawer = () => setIsDrawerOpen(false);
+	const [up, setUp] = useState(true);
   
   const openSideDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
@@ -37,6 +38,12 @@ export default function Header() {
   React.useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 50;
+			if(currentPosition < window.scrollY){
+				setUp(false);
+			}else if (currentPosition > window.scrollY){
+				setUp(true);
+			}
+			setCurrentPosition(window.scrollY);
       setIsScrolled(isScrolled);
     };
     document.addEventListener("scroll", handleScroll);
@@ -44,22 +51,22 @@ export default function Header() {
     return () => {
       document.removeEventListener("scroll", handleScroll);
     };
-  }, [location]);
+  }, [location, currentPosition]);
 	return(
 		<>
-			<div className={`w-full h-[130px] flex fixed justify-center ${!isScrolled && !bar ? 'header-bg': 'bg-background'} z-[12]`}>
+			<div className={`w-full h-[130px] flex fixed justify-center transition-all duration-500 ${!isScrolled && !bar ? 'header-bg': up? 'bg-background opacity-100' : bar?'' :'opacity-0'} z-[12]`}>
 				<div className={`max-w-[1290px] flex flex-row h-[50px] w-full justify-between duration-300 lg:flex-row mx-auto pt-9 px-[40px]`}>
-					<div className='max-w-[403.33px] w-full h-[44px] flex flex-row justify-center gap-6'>
-						<Link to={'/building'}className={`h-[44px] hidden md:block py-2 text-white ${bar ? 'opacity-0' : ''} link`} >THE BUILDING</Link>
-						<Link to={'/building'}className={`h-[44px] hidden md:block py-2 text-white ${bar ? 'opacity-0' : ''} link`} >THE ROOF</Link>
+					<div className='max-w-[403.33px] w-full h-[32px] flex flex-row justify-center gap-6'>
+						<Link to={'/building'}className={`hidden md:block py-2 text-white ${bar ? 'opacity-0' : ''} link`} >THE BUILDING</Link>
+						<Link to={'/building'}className={`hidden md:block py-2 text-white ${bar ? 'opacity-0' : ''} link`} >THE ROOF</Link>
 					</div>
 					<Link to={'/'} className='max-w-[150px] w-full h-[59px]'>
 						<img src={Logo}></img>
 					</Link>
-					<div className='max-w-[403.33px] w-full flex flex-row justify-center h-[44px]  gap-6'>
-						<Link to={'/building'}className={`h-[44px] hidden md:block py-2 text-white ${bar ? 'opacity-0' : ''} link`}>NEIGHBORHOOD</Link>
-						<Link to={'/building'}className={`h-[44px] hidden md:block py-2 text-white ${bar ? 'opacity-0' : ''} link`}>CONTACT</Link>
-						<div className={`max-w-[50px] w-full h-[50px] `} >
+					<div className='max-w-[403.33px] w-full flex h-[32px] flex-row justify-center  gap-6'>
+						<Link to={'/building'}className={`hidden md:block py-2 text-white ${bar ? 'opacity-0' : ''} link`}>NEIGHBORHOOD</Link>
+						<Link to={'/building'}className={`hidden md:block py-2 text-white ${bar ? 'opacity-0' : ''} link`}>CONTACT</Link>
+						<div className={`max-w-[50px] w-full h-[34px] `} >
 							<button
 								onClick={openDrawer}
 							>
@@ -73,7 +80,7 @@ export default function Header() {
 					</div>
 				</div>
 			</div>
-			<div className={`flex w-full h-screen menu-bg transition-all duration-0 ease-in-out  justify-center items-safe-center fixed  opacity-1 bg-background ${!bar ? ' -top-full': 'z-[11] top-0'}`}>
+			<div className={`flex w-full h-screen menu-bg transition-all duration-500 justify-center fixed  opacity-1 bg-background ${!bar ? ' -top-full': 'z-[11] top-0'}`}>
 				<nav class="flex max-lg:h-full max-lg:flex-col max-w-[1272px] mx-auto w-full justify-between px-4 pt-[120px] pb-[70px] gap-2 max-md:pt-[85px] max-sm:pb-[47px]">
 					<div class="lg:hidden"></div>
 					<ul class="gap-8 font-bold text-xl sm:text-4xl lg:text-[32px] lg:leading-normal flex flex-col items-center lg:items-start justify-center text-[#fffff]">
