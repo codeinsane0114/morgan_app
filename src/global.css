@@ -37,6 +37,14 @@
 .header-bg {
   background: linear-gradient(180deg, rgba(85,85,85,1) 0%, rgba(255,255,255,0) 100%);
 }
+a {
+  text-decoration: none !important;
+}
+.carousel-dark .carousel-indicators [data-bs-target] {
+  background-color: #000;
+  width: 10px;
+  height: 10px;
+}
 /*.link {
   cursor: pointer;
 }
